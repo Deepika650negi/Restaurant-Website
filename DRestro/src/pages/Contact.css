@@ -1,0 +1,71 @@
+/* Fade Animations */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+.fade-left {
+  animation: fadeLeft 0.9s ease-out;
+}
+.fade-right {
+  animation: fadeRight 0.9s ease-out;
+}
+.fade-up {
+  animation: fadeUp 0.9s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+}
+
+/* Contact Items Hover */
+.contact-item {
+  transition: 0.3s ease;
+}
+.contact-item:hover {
+  transform: translateX(5px);
+  color: #8b2e2e;
+  font-weight: bold;
+}
+
+/* Social Icon Hover Float */
+.hover-float {
+  transition: 0.4s ease;
+}
+.hover-float:hover {
+  transform: translateY(-6px) scale(1.1);
+}
+
+/* Info Card */
+.info-card {
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-left: 6px solid #8b2e2e;
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  background: #ffffff;
+  border-left: 6px solid #d9534f;
+}
+
+/* Send Button */
+.send-btn {
+  transition: 0.3s;
+}
+.send-btn:hover {
+  transform: translateY(-3px);
+  background-color: #a82828 !important;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Map Styling */
+.map-container iframe {
+  border: none;
+}

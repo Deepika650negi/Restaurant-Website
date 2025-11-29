@@ -1,0 +1,170 @@
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* HERO */
+.about-hero {
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+}
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* STORY ANIMATIONS */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideLeft 1s forwards;
+}
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideRight 1s forwards;
+}
+@keyframes slideLeft { to { opacity:1; transform: translateX(0); } }
+@keyframes slideRight { to { opacity:1; transform: translateX(0); } }
+
+/* FEATURE CARDS */
+.feature-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  border: 1px solid #f0d7d7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #7A2E2E;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(122,46,46,0.2);
+}
+.feature-card i {
+  color: #7A2E2E;
+}
+
+/* DELAYS */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* TESTIMONIALS */
+.testimonial-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+.testimonial-card {
+  min-width: 250px;
+  background: #fff3f3;
+  border-radius: 12px;
+  padding: 15px;
+  scroll-snap-align: start;
+  border: 1px solid #f0d7d7;
+  color: #7A2E2E;
+}
+
+/* CHEF CARDS */
+.chef-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.chef-card h6 {
+  margin-bottom: 0;
+}
+.chef-card {
+  color: #7A2E2E;
+}
+
+/* TRUST */
+.trust-box img {
+  width: 60px;
+}
+.trust-item p {
+  color: #7A2E2E;
+}
+
+/* GALLERY */
+.gallery-item img {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Scroll Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+@keyframes fadeUp {
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* CTA Banner Responsive */
+.cta-banner {
+  background: linear-gradient(135deg, #8b2e2e, #a94444);
+  border-radius: 15px;
+  width: 90%;                
+  max-width: 700px;         
+  margin: 2rem auto;         
+  color: #fff;
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;       
+  text-align: center;   
+}
+
+/* Titles */
+.cta-title {
+  font-size: 1.8rem;
+}
+
+.cta-subtitle {
+  font-size: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 10px 22px;
+  }
+}
